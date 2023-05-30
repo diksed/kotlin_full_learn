@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         //collections()
         //operators()
         //ifElse()
-        switchWhen()
+        //switchWhen()
+        loops()
     }
 }
 
@@ -179,4 +180,33 @@ fun switchWhen(){
         else -> println("Invalid day")
     }
 
+}
+fun loops(){
+    // For Loop
+    val myNumbers = arrayOf(12,15,18,21,24,27,30,33)
+    for (number in myNumbers){
+        println(number / 3 * 5)
+    }
+    for (i in myNumbers.indices){
+        println(myNumbers[i] / 3 * 5)
+    }
+    for (i in 0..10){
+        println(i)
+    }
+    val myStringArrayList = ArrayList<String>()
+    myStringArrayList.add("Sedat")
+    myStringArrayList.add("Kavak")
+    myStringArrayList.add("Kotlin")
+    for (myString in myStringArrayList){
+        println(myString)
+    }
+    myStringArrayList.forEach { println(it) }
+
+
+    // While Loop
+    var j = 0
+    while (j < 10){
+        println(j)
+        j++
+    }
 }
