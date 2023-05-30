@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         //string()
         //boolean()
         //conversion()
-        collections()
+        //collections()
+        operators()
     }
 }
 
@@ -136,4 +137,18 @@ fun collections(){
     val myNewHashMap = hashMapOf<String,Int>("A" to 1,"B" to 2)
     println(myNewHashMap["A"])
 
+}
+fun operators(){
+    var m = 5
+    m += 1
+    println(m)
+    m++
+    println(m)
+    m--
+    println(m)
+    var n = 7
+
+    println(n > m)
+    println(n > m && 3 > 1)
+    println(n > m && 1 > 3)
 }
