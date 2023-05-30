@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         //doubleFloat()
         //string()
         //boolean()
-        conversion()
+        //conversion()
+        collections()
     }
 }
 
@@ -73,4 +74,66 @@ fun conversion(){
     var input = "10"
     var inputInt = input.toInt()
     println(inputInt * 2)
+}
+fun collections(){
+    // Arrays
+    val myArray = arrayOf("Sedat","Kavak","Kotlin","Java")
+    println(myArray[0])
+    myArray[0] = "Ahmet"
+    println(myArray[0])
+    myArray.set(1,"Mehmet")
+    println(myArray[1])
+    val numberArray = arrayOf(1,2,3,4,5)
+    val myNewArray = doubleArrayOf(1.0,2.0,3.0)
+    val mixedArray = arrayOf("Sedat",1,true)
+    println(mixedArray[0])
+    println(mixedArray[1])
+
+
+    // List - ArrayList
+    val myMusician = arrayListOf<String>("James","Kirk")
+    myMusician.add("Lars")
+    println(myMusician[2])
+    myMusician.add(0,"Rob")
+    println(myMusician[0])
+
+    val myArrayList = ArrayList<Int>()
+    myArrayList.add(1)
+    myArrayList.add(200)
+    val myMixedArrayList = ArrayList<Any>()
+    myMixedArrayList.add("Sedat")
+    myMixedArrayList.add(20.20)
+    myMixedArrayList.add(true)
+
+    println(myMixedArrayList[0])
+    println(myMixedArrayList[1])
+    println(myMixedArrayList[2])
+
+
+    // Set
+    val myExampleArray = arrayOf(1,1,2,3,4,5,5)
+    println("element 1 : ${myExampleArray[0]}")
+    println("element 2 : ${myExampleArray[1]}")
+
+    val mySet = setOf<Int>(1,1,2,3)
+    println(mySet.size)
+
+    mySet.forEach { println("element : $it") }
+    val myStringSet = hashSetOf<String>()
+    myStringSet.add("Sedat")
+    myStringSet.add("Sedat")
+    println(myStringSet.size)
+
+
+    // Map
+    val fruitCalorieMap = hashMapOf<String,Int>()
+    fruitCalorieMap.put("Apple",100)
+    fruitCalorieMap.put("Banana",150)
+    println(fruitCalorieMap["Apple"])
+    println(fruitCalorieMap["Banana"])
+
+    val myHashMap = HashMap<String,String>()
+    val myNewHashMap = hashMapOf<String,Int>("A" to 1,"B" to 2)
+    println(myNewHashMap["A"])
+
 }
