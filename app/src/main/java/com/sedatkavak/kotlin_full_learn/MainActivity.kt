@@ -2,23 +2,36 @@ package com.sedatkavak.kotlin_full_learn
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    lateinit var myTextView : TextView
+    lateinit var myButton : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        myTextView = findViewById(R.id.textView)
+        myButton = findViewById(R.id.button)
+        /*
+        myButton.setOnClickListener{
+            myTextView.text = "Button Clicked"
+        }
+         */
 
-        //integer()
-        //doubleFloat()
-        //string()
-        //boolean()
-        //conversion()
-        //collections()
-        //operators()
-        //ifElse()
-        //switchWhen()
-        loops()
+        mySum(5,10)
     }
+    fun mySum(a:Int, b:Int){
+        myTextView.text = "Result : ${a + b}"
+    }
+    fun myMultiply(a:Int, b:Int) : Int{
+        return a * b
+    }
+    fun buttonClicked(view: View){
+        myTextView.text = "Button Clicked"
+    }
+
 }
 
 fun integer(){
