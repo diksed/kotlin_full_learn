@@ -10,7 +10,8 @@ class MainActivity : AppCompatActivity() {
 
         //integer()
         //doubleFloat()
-        string()
+        //string()
+        boolean()
     }
 }
 
@@ -53,4 +54,14 @@ fun string(){
     println(fullname)
 
     val larsName : String = "Lars"
+}
+fun boolean(){
+    var myBoolean : Boolean = true
+    myBoolean = false
+    var isAlive = true
+
+    println(3<5)
+    println(3>5)
+    println(3 == 3)
+    println(4 != 5)
 }
