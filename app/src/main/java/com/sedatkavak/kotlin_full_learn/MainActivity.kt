@@ -9,7 +9,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //integer()
-        doubleFloat()
+        //doubleFloat()
+        string()
     }
 }
 
@@ -43,4 +44,13 @@ fun doubleFloat(){
 
     var myAge : Double
     myAge = 22.0
+}
+fun string(){
+    val myString = "Sedat Kavak"
+    val name = "Sedat"
+    val surname = "Kavak"
+    val fullname = name + " " + surname
+    println(fullname)
+
+    val larsName : String = "Lars"
 }
