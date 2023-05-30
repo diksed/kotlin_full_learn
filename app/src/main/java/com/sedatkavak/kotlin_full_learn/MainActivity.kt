@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         //boolean()
         //conversion()
         //collections()
-        operators()
+        //operators()
+        ifElse()
     }
 }
 
@@ -151,4 +152,16 @@ fun operators(){
     println(n > m)
     println(n > m && 3 > 1)
     println(n > m && 1 > 3)
+}
+fun ifElse(){
+    val myAge = 32
+    if (myAge < 30){
+        println("You are young")
+    }
+    else if (myAge >= 30 && myAge < 40){
+        println("You are in your 30s")
+    }
+    else{
+        println("You are old")
+    }
 }
