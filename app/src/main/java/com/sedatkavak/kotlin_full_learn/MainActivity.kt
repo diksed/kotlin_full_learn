@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
         //integer()
         //doubleFloat()
         //string()
-        boolean()
+        //boolean()
+        conversion()
     }
 }
 
@@ -64,4 +65,12 @@ fun boolean(){
     println(3>5)
     println(3 == 3)
     println(4 != 5)
+}
+fun conversion(){
+    var myNumber = 5
+    var myLongNumber = myNumber.toLong()
+
+    var input = "10"
+    var inputInt = input.toInt()
+    println(inputInt * 2)
 }
