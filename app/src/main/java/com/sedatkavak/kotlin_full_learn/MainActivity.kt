@@ -1,15 +1,15 @@
 package com.sedatkavak.kotlin_full_learn
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.sedatkavak.kotlin_full_learn.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var sharedPref: SharedPreferences
-    var userAgePref : Int? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,28 +17,20 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        sharedPref = getSharedPreferences("com.sedatkavak.kotlin_full_learn", MODE_PRIVATE)
-        userAgePref = sharedPref.getInt("age",0)
-        if (userAgePref != 0){
-            binding.resultText.text = "Your Age : $userAgePref"
-        }
-
+        Toast.makeText(this@MainActivity, "Welcome", Toast.LENGTH_SHORT).show()
     }
 
     fun save(view: View) {
-        val myAge = binding.editText.text.toString().toIntOrNull()
-        if (myAge != null) {
-            binding.resultText.text = "Your Age : $myAge"
-            sharedPref.edit().putInt("age", myAge).apply()
+        val alert = AlertDialog.Builder(this@MainActivity)
+        alert.setTitle("Save")
+        alert.setMessage("Are you sure?")
+        alert.setPositiveButton("YES") { dialog, which ->
+            Toast.makeText(this@MainActivity, "Saved", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    fun delete(view: View) {
-        userAgePref = sharedPref.getInt("age",0)
-        if (userAgePref != 0){
-            sharedPref.edit().remove("age").apply()
-            binding.resultText.text = "Your Age : "
+        alert.setNegativeButton("NO") { dialog, which ->
+            Toast.makeText(this@MainActivity, "Not Saved", Toast.LENGTH_SHORT).show()
         }
+        alert.show()
     }
 
 }
