@@ -16,9 +16,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        binding.editText.setText("")
+    }
+
+
     fun next(view: View) {
         val intent = Intent(this@MainActivity, SecondScreenActivity::class.java)
         intent.putExtra("name", binding.editText.text.toString())
         startActivity(intent)
+        finish()
     }
 }
