@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Kotlin_full_learn"
         tools:targetApi="31">
         <activity
-            android:name=".count_down.CountDownActivity"
+            android:name=".stopwatch.StopwatchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".count_down.CountDownActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".second_screen.SecondScreenActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
