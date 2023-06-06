@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Kotlin_full_learn"
         tools:targetApi="31">
         <activity
-            android:name=".catch_the_kenny.CatchTheKennyActivity"
+            android:name=".oop.OOPActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".stopwatch.StopwatchActivity"
+            android:name=".catch_the_kenny.CatchTheKennyActivity"
             android:exported="true"></activity>
+        <activity
+            android:name=".stopwatch.StopwatchActivity"
+            android:exported="true" />
         <activity
             android:name=".count_down.CountDownActivity"
             android:exported="true" />
