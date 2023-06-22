@@ -1,4 +1,4 @@
-package com.sedatkavak.kotlin_full_learn.second_screen
+package com.sedatkavak.kotlin_full_learn.kotlin_101.second_screen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

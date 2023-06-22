@@ -1,4 +1,4 @@
-package com.sedatkavak.kotlin_full_learn.oop
+package com.sedatkavak.kotlin_full_learn.kotlin_101.oop
 
 class User : People {
     var name: String? = null

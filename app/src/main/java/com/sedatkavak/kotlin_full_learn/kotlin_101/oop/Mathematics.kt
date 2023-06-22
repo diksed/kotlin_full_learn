@@ -1,4 +1,4 @@
-package com.sedatkavak.kotlin_full_learn.oop
+package com.sedatkavak.kotlin_full_learn.kotlin_101.oop
 
 class Mathematics {
     fun sum() : Int {

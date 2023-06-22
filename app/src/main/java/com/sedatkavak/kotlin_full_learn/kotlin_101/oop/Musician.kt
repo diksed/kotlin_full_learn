@@ -1,4 +1,4 @@
-package com.sedatkavak.kotlin_full_learn.oop
+package com.sedatkavak.kotlin_full_learn.kotlin_101.oop
 
 open class Musician(name: String, age: Int, instrument: String) {
     var name: String? = name

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.sedatkavak.kotlin_full_learn.databinding.ActivityMainBinding
-import com.sedatkavak.kotlin_full_learn.second_screen.SecondScreenActivity
+import com.sedatkavak.kotlin_full_learn.kotlin_101.second_screen.SecondScreenActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
