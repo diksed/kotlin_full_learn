@@ -33,10 +33,22 @@ class OOPActivity : AppCompatActivity() {
         dog.sing()
         dog.test()
 
-        var myPiano = Piano("Living Room")
+        val myPiano = Piano("Living Room")
         myPiano.brand = "Yamaha"
         myPiano.digital = false
         println(myPiano.roomName)
         myPiano.info()
+
+        val testString = {myString: String -> println(myString)}
+        testString("Test String")
+        val multiplyLambda = {a: Int, b: Int -> a * b}
+        println(multiplyLambda(5, 6))
+
+        fun downloadMusicians(url: String, completion: () -> Unit) {
+            // url -> download
+            // completion -> function
+            completion()
+        }
+        downloadMusicians("sedatkavak.com") { println("Downloaded") }
     }
 }
