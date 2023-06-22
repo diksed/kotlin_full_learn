@@ -15,6 +15,7 @@ class OOPActivity : AppCompatActivity() {
         println("Name: ${james.name} Age: ${james.age}")
         println(james.returnBandName("1234"))
         println(james.returnBandName("12345"))
+        println(myUser.information())
 
 
         var lars = SuperMusician("Lars", 65, "Drums")
@@ -31,5 +32,11 @@ class OOPActivity : AppCompatActivity() {
         val dog = Dog()
         dog.sing()
         dog.test()
+
+        var myPiano = Piano("Living Room")
+        myPiano.brand = "Yamaha"
+        myPiano.digital = false
+        println(myPiano.roomName)
+        myPiano.info()
     }
 }

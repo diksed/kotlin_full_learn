@@ -1,6 +1,6 @@
 package com.sedatkavak.kotlin_full_learn.oop
 
-class User {
+class User : People {
     var name: String? = null
     var age: Int? = null
 
